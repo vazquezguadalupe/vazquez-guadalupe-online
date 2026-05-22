@@ -1,0 +1,70 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #050505; color: white; }
+button { font: inherit; cursor: pointer; }
+.site { min-height: 100vh; background: #050505; color: white; }
+.header { position: sticky; top: 0; z-index: 20; background: rgba(5,5,5,.96); border-bottom: 1px solid rgba(255,255,255,.1); backdrop-filter: blur(12px); }
+.topbar { max-width: 1280px; margin: 0 auto; padding: 16px; display: flex; align-items: center; justify-content: space-between; }
+.brand { display: flex; align-items: center; gap: 14px; background: transparent; color: white; border: 0; text-align: left; }
+.brand img { width: 62px; height: 62px; object-fit: contain; border-radius: 14px; box-shadow: 0 0 30px rgba(168,85,247,.35); }
+.brand p { margin: 0; font-size: 34px; font-weight: 900; letter-spacing: .18em; line-height: 1; }
+.brand span { display: block; color: #d4d4d8; font-size: 16px; font-weight: 700; letter-spacing: .55em; margin-top: 6px; }
+.social { display: flex; gap: 18px; align-items: center; font-weight: 900; }
+.mobile { display: none; background: transparent; border: 0; color: white; }
+.nav { border-top: 1px solid rgba(255,255,255,.1); max-width: 1280px; margin: 0 auto; display: flex; align-items: center; overflow-x: auto; }
+.nav button { white-space: nowrap; background: transparent; border: 0; color: white; padding: 16px 20px; font-weight: 900; text-transform: uppercase; font-size: 13px; border-bottom: 2px solid transparent; }
+.nav button:hover, .nav .active { color: #c084fc; border-bottom-color: #a855f7; }
+.nav .home-btn { background: #7e22ce; border-bottom: 0; }
+.nav .video { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+.home { max-width: 1280px; margin: 0 auto; padding: 18px 16px; }
+.hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.small-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.hero-card { position: relative; overflow: hidden; border-radius: 14px; border: 1px solid rgba(255,255,255,.1); background: #111; text-align: left; color: white; padding: 0; min-height: 250px; }
+.hero-card.large { min-height: 520px; }
+.hero-card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.hero-card:hover img, .recent-card:hover img { transform: scale(1.05); }
+.overlay { position: absolute; inset: 0; background: linear-gradient(to top, #000 0%, rgba(0,0,0,.65) 45%, transparent 100%); }
+.card-copy { position: absolute; bottom: 0; padding: 24px; }
+.card-copy h1 { font-size: 48px; line-height: 1; margin: 10px 0; font-weight: 900; }
+.card-copy h2 { font-size: 24px; line-height: 1.05; margin: 8px 0; font-weight: 900; }
+.card-copy p { color: #e5e5e5; }
+.tag { display: inline-flex; background: #7e22ce; color: white !important; padding: 6px 9px; border-radius: 4px; font-size: 11px !important; font-weight: 900; text-transform: uppercase; letter-spacing: .04em; }
+.section-title { margin-top: 24px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(168,85,247,.8); padding-bottom: 12px; }
+.section-title h2 { margin: 0; text-transform: uppercase; font-size: 28px; font-weight: 900; }
+.section-title button { display: flex; align-items: center; gap: 6px; background: transparent; border: 0; color: #c084fc; font-weight: 900; text-transform: uppercase; }
+.recent-grid { margin-top: 16px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.recent-card { overflow: hidden; border-radius: 14px; border: 1px solid rgba(255,255,255,.1); background: rgba(255,255,255,.05); color: white; text-align: left; padding: 0; }
+.recent-card img { width: 100%; height: 160px; object-fit: cover; transition: transform .5s ease; }
+.recent-card div { padding: 16px; }
+.recent-card h3 { margin: 8px 0; font-size: 21px; line-height: 1.05; font-weight: 900; }
+.recent-card p { color: #d4d4d8; font-size: 14px; }
+.recent-card span { display: flex; align-items: center; gap: 6px; color: #a1a1aa; font-size: 12px; }
+.newsletter { margin: 32px 0; border: 1px solid rgba(168,85,247,.6); background: linear-gradient(to right, rgba(88,28,135,.8), #050505); border-radius: 16px; padding: 22px; display: grid; grid-template-columns: auto 1fr auto; gap: 18px; align-items: center; }
+.newsletter-icon { border: 1px solid #a855f7; color: #c084fc; padding: 12px; border-radius: 14px; }
+.newsletter h3 { margin: 0; text-transform: uppercase; font-weight: 900; }
+.newsletter p { margin: 4px 0 0; color: #d4d4d8; }
+.newsletter-form { display: flex; gap: 10px; }
+.newsletter-form input { min-width: 280px; background: #050505; color: white; border: 1px solid rgba(255,255,255,.15); border-radius: 10px; padding: 14px; outline: 0; }
+.newsletter-form input:focus { border-color: #a855f7; }
+.newsletter-form button { background: #7e22ce; color: white; border: 0; border-radius: 10px; padding: 14px 22px; font-weight: 900; text-transform: uppercase; }
+.article-page { max-width: 880px; margin: 0 auto; padding: 32px 16px; }
+.back-button { margin-bottom: 24px; color: white; background: transparent; border: 1px solid rgba(255,255,255,.2); border-radius: 999px; padding: 10px 16px; }
+.article-title { font-size: 58px; line-height: 1; margin: 16px 0; font-weight: 900; }
+.meta { display: flex; flex-wrap: wrap; gap: 16px; color: #a1a1aa; font-size: 14px; margin-bottom: 24px; }
+.meta span { display: flex; align-items: center; gap: 6px; }
+.article-image { width: 100%; height: 420px; object-fit: cover; border-radius: 18px; box-shadow: 0 0 40px rgba(88,28,135,.5); margin-bottom: 32px; }
+.article-body { color: #e5e5e5; font-size: 20px; line-height: 1.8; }
+
+@media (max-width: 900px) {
+  .brand p { font-size: 24px; }
+  .brand span { font-size: 12px; letter-spacing: .35em; }
+  .social { display: none; }
+  .mobile { display: block; }
+  .hero-grid { grid-template-columns: 1fr; }
+  .small-grid { grid-template-columns: 1fr; }
+  .recent-grid { grid-template-columns: 1fr; }
+  .newsletter { grid-template-columns: 1fr; }
+  .newsletter-form { flex-direction: column; }
+  .newsletter-form input { min-width: 0; width: 100%; }
+  .card-copy h1 { font-size: 36px; }
+  .article-title { font-size: 40px; }
+}
